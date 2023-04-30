@@ -1,4 +1,4 @@
-# Avaliação Parcial Grafos
+# Avaliação Parcial Teoria da Computação
 Autor: Guilherme Sisdelli Maruno 836781
 
 Objetivos: Esse projeto permite a criação de dois grafos em que usuário pode criar e deletar vértices e arestas, verificar a existência de arestas ou vizinho e o caminho entre dois vertices. Ele também permite a impressão da união e da interseção dos dois grafos.
