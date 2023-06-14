@@ -23,71 +23,81 @@ public class MenuGrafo {
             		break;
                 case 2:
                     System.out.println("\nVerificar Arestas");
-                    System.out.println("\nInsira o primeiro vÈrtice: ");
+                    System.out.println("\nInsira o primeiro v√©rtice: ");
                     vertX = sc.nextLine();
-                    System.out.println("\nInsira o segundo vÈrtice: ");
+                    System.out.println("\nInsira o segundo v√©rtice: ");
                     vertY = sc.nextLine();
                     if (g.adjacente(vertX, vertY)) {
                         System.out.println("\nExiste");
                     } else {
-                        System.out.println("\nN„o Existe");
+                        System.out.println("\nN√£o Existe");
                     }
                     break;
 
                 case 3:
                     System.out.println("\nVizinhos");
-                    System.out.println("\nInsira o vÈrtice: ");
+                    System.out.println("\nInsira o v√©rtice: ");
                     vertX = sc.nextLine();
                     System.out.println("Vizinhos: "+g.vizinhos(vertX));
                     break;
 
                 case 4:
                     System.out.println("\nAdicionando Vertice");
-                    System.out.println("\nInsira o vÈrtice: ");
+                    System.out.println("\nInsira o v√©rtice: ");
                     vertX = sc.nextLine();
                     g.addVertex(vertX);
                     break;
 
                 case 5:
                     System.out.println("\nRemover Vertice");
-                    System.out.println("\nInsira o vÈrtice: ");
+                    System.out.println("\nInsira o v√©rtice: ");
                     vertX = sc.nextLine();
                     g.removeVertex(vertX);
                     break;
 
                 case 6:
                     System.out.println("\nCriar Aresta");
-                    System.out.println("\nInsira o primeiro vÈrtice: ");
+                    System.out.println("\nInsira o primeiro v√©rtice: ");
                     vertX = sc.nextLine();
-                    System.out.println("\nInsira o segundo vÈrtice: ");
+                    System.out.println("\nInsira o segundo v√©rtice: ");
                     vertY = sc.nextLine();
                     g.addEdge(vertX, vertY);
                     break;
 
                 case 7:
                     System.out.println("\nDeletar Aresta");
-                    System.out.println("\nInsira o primeiro vÈrtice: ");
+                    System.out.println("\nInsira o primeiro v√©rtice: ");
                     vertX = sc.nextLine();
-                    System.out.println("\nInsira o segundo vÈrtice: ");
+                    System.out.println("\nInsira o segundo v√©rtice: ");
                     vertY = sc.nextLine();
                     g.removeEdge(vertX, vertY);
                     break;
                     
                 case 8: 
                 	System.out.println("\nEncontrar Caminho");
-                    System.out.println("\nInsira o primeiro vÈrtice: ");
+                    System.out.println("\nInsira o primeiro v√©rtice: ");
                     vertX = sc.nextLine();
-                    System.out.println("\nInsira o segundo vÈrtice: ");
+                    System.out.println("\nInsira o segundo v√©rtice: ");
                     vertY = sc.nextLine();
                     g.findCaminho(vertX,vertY);
                 	break;
 
-                case 9:
+                case 9: 
+                	System.out.println("\nBusca BFS");
+                    System.out.println("\nInsira o primeiro v√©rtice: ");
+                    vertX = sc.nextLine();
+                    System.out.println("\nInsira o ultimo v√©rtice: ");
+                    vertY = sc.nextLine();
+                    g.buscaBfs(vertX,vertY);
+                	break;
+                	
+                	
+                case 10:
                     System.out.println("\nVoltando...");
                     return g;
 
                 default:
-                    System.out.println("\nOpÁ„o inv·lida. Tente novamente.");
+                    System.out.println("\nOp√ß√£o inv√°lida. Tente novamente.");
                     break;
             }
         }
