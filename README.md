@@ -1,4 +1,4 @@
-# Avaliação Parcial Teoria da Computação
+# Avaliação Final Teoria da Computação
 Autor: Guilherme Sisdelli Maruno 836781
 
 Objetivos: Este projeto possibilita a criação de dois grafos em que o usuário pode adicionar ou remover vértices e arestas, verificar a existência de arestas ou vizinhos, e ainda verificar o caminho entre dois vértices. Além disso, é possível visualizar a união e a interseção dos dois grafos criados.
