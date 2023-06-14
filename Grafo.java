@@ -258,6 +258,47 @@ public class Grafo {
 	        }
 	    }
 	}
+  
+  public void buscaBfs(String inicio, String fim) {
+	    var startVertex = findVertex(inicio);
+	    var endVertex = findVertex(fim);
+
+	    if (startVertex == null || endVertex == null) {
+	        System.out.println("Vértices de início ou fim não encontrados.");
+	        return;
+	    }
+
+	    var visited = new HashSet<Vertex>();
+	    var queue = new LinkedList<Vertex>();
+	    var path = new LinkedList<Vertex>();
+
+	    queue.add(startVertex);
+	    visited.add(startVertex);
+
+	    while (!queue.isEmpty()) {
+	        var currentVertex = queue.poll();
+	        path.add(currentVertex);
+
+	        if (currentVertex == endVertex) {
+	            System.out.print("Caminho percorrido: ");
+	            for (Vertex v : path) {
+	                System.out.print(v.getLabel() + " ");
+	            }
+	            System.out.println();
+	            return;
+	        }
+
+	        for (Aresta edge : currentVertex.getEdges()) {
+	            var neighbor = edge.getTo();
+	            if (!visited.contains(neighbor)) {
+	                visited.add(neighbor);
+	                queue.add(neighbor);
+	            }
+	        }
+	    }
+
+	    System.out.println("Caminho não encontrado.");
+	}
 
   
   @Override
