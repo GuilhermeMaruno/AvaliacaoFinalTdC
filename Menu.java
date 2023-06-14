@@ -9,7 +9,7 @@ public class Menu {
 		
 		System.out.println("Gerenciar Grafo "+nome+"\nSELECIONE\n"+
 		"\n1- Imprime\n2- Verificar Aresta\n3- Checar Vizinho\n4- Criar Vertice\n"+
-		"5- Deletar Vertice\n6- Criar Aresta\n7- Deletar Aresta\n8- Encontrar Caminho\n9- Voltar");
+		"5- Deletar Vertice\n6- Criar Aresta\n7- Deletar Aresta\n8- Encontrar Caminho\n9- Busca BFS\n10- Voltar");
 		nav = sc.nextInt();
 		
 		return nav;
